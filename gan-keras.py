@@ -1,7 +1,10 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-%matplotlib inlineimport keras
+#%matplotlib inline 
+from IPython import get_ipython
+get_ipython().run_line_magic('matplotlib', 'inline')
+import keras
 from keras.layers import Dense, Dropout, Input
 from keras.models import Model,Sequential
 from keras.datasets import mnist
@@ -16,7 +19,8 @@ def load_data():
     # convert shape of x_train from (60000, 28, 28) to (60000, 784) 
     # 784 columns per row
     x_train = x_train.reshape(60000, 784)
-    return (x_train, y_train, x_test, y_test)(X_train, y_train,X_test, y_test)=load_data()
+    X_train, y_train,X_test, y_test)=load_data()
+    return (x_train, y_train, x_test, y_test)
 print(X_train.shape)
 
 
@@ -75,7 +79,10 @@ def create_gan(discriminator, generator):
     gan_output= discriminator(x)
     gan= Model(inputs=gan_input, outputs=gan_output)
     gan.compile(loss='binary_crossentropy', optimizer='adam')
-    return gangan = create_gan(d,g)
+    gan = create_gan(d,g)
+
+    return gan
+
 gan.summary()
 
 
