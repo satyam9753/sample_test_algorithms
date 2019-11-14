@@ -92,7 +92,7 @@ def create_patch(faves_score,imgs,median):
             s="high"+str(i)
         else:
             s="low"+str(i)
-        cv2.imwrite("/home/satyam/Desktop/personal/hl/"+s + '.jpg',patches)
+        cv2.imwrite("/home/satyam/Desktop/personal/hl/"+s + '.jpg',patches)      ##DIRECTORY WHERE PATCHES ARE TO BE STORED
     return patches
 
 
