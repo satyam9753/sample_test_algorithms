@@ -80,7 +80,7 @@ def create_gan(discriminator, generator):
     gan= Model(inputs=gan_input, outputs=gan_output)
     gan.compile(loss='binary_crossentropy', optimizer='adam')
     gan = create_gan(d,g)
-
+  
     return gan
 
 gan.summary()
